@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Json" path="/json" id="27c48ec5-e49a-4926-a148-3e25e0db3a3d" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="27c48ec5-e49a-4926-a148-3e25e0db3a3dfileName">Json</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Json" id="37bd6206-5824-44ad-bf4b-2846017d2d9e" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>lat</con:name>
+        <con:value>42.3584</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>42.3584</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>lng</con:name>
+        <con:value>-71.0598</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>-71.0598</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>timezone</con:name>
+        <con:value>EST</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>EST</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>date</con:name>
+        <con:value>today</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>today</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:json="https://api.sunrisesunset.io/json">json:Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="b608a5b4-4c4a-4d4f-b96a-fe73b0f15857" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api.sunrisesunset.io</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="date" value="today"/>
+        <con:entry key="lng" value="-71.0598"/>
+        <con:entry key="timezone" value="EST"/>
+        <con:entry key="lat" value="42.3584"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>lat</con:entry>
+        <con:entry>lng</con:entry>
+        <con:entry>timezone</con:entry>
+        <con:entry>date</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

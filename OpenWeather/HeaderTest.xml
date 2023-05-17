@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="c7d16e65-dc5c-4202-b28f-0fd878ed3a82" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="HeaderTest" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c7d16e65-dc5c-4202-b28f-0fd878ed3a82fileName">HeaderTest</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="GetInfo-200" id="246ca81c-4639-4690-a2a8-5e4a8eeb4161">
+    <con:settings/>
+    <con:config service="http://api.openweathermap.org" resourcePath="/data/2.5/weather" methodName="Weather" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GetInfo-200" id="7b18a784-89f5-4138-a772-b9367ebe5414" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://api.openweathermap.org</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://api.openweathermap.org/data/2.5/weather</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="3aab7446-9ee6-406e-9fb4-89ef684921d1" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200, 202</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="GroovyScriptAssertion" id="b70aa218-457f-4016-bd24-5c6696582454" name="Script Assertion">
+          <con:configuration>
+            <scriptText>def headers =  messageExchange.getResponseHeaders()
+log.info headers["#status#"]
+assert ['HTTP/1.1 200 OK'] == headers["#status#"]
+//log.info messageExchange.getResponseContent()
+// headers["#status#"] instanceof List
+def actualStatus =  headers["#status#"].get(0)
+def excelExpectedValue = '200 OK'
+def expectedStatus = 'HTTP/1.1 '+excelExpectedValue
+assert expectedStatus == actualStatus</scriptText>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="q" value="Boston"/>
+          <con:entry key="appid" value="85c705dd76051cb3d8e5540b300279d4"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>q</con:entry>
+          <con:entry>appid</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="GetInfo-404" id="cb505b85-1c7b-4cba-b09e-c4e0130c77ba">
+    <con:settings/>
+    <con:config service="http://api.openweathermap.org" resourcePath="/data/2.5/weather" methodName="Weather" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GetInfo-404" id="7b18a784-89f5-4138-a772-b9367ebe5414" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://api.openweathermap.org</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://api.openweathermap.org/data/2.5/weather</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="3aab7446-9ee6-406e-9fb4-89ef684921d1" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200, 202</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="GroovyScriptAssertion" id="b70aa218-457f-4016-bd24-5c6696582454" name="Script Assertion">
+          <con:configuration>
+            <scriptText>def headers =  messageExchange.getResponseHeaders()
+log.info headers["#status#"]
+assert ['HTTP/1.1 200 OK'] == headers["#status#"]
+//log.info messageExchange.getResponseContent()
+// headers["#status#"] instanceof List
+def actualStatus =  headers["#status#"].get(0)
+def excelExpectedValue = '200 OK'
+def expectedStatus = 'HTTP/1.1 '+excelExpectedValue
+assert expectedStatus == actualStatus</scriptText>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="q" value="asnklfnasklfnkalsnfalkf"/>
+          <con:entry key="appid" value="85c705dd76051cb3d8e5540b300279d4"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>q</con:entry>
+          <con:entry>appid</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="GetStatusCode" id="cb5c19b3-03bb-4719-9ecf-b726601c6ad9">
+    <con:settings/>
+    <con:config>
+      <script>//Get Status code for 200 request
+def httpResponseHeaders = testRunner.testCase.getTestStepByName("GetInfo-200").testRequest.response.responseHeaders
+def httpStatus = httpResponseHeaders["#status#"]
+def httpStatusCode = (httpStatus =~ "[1-5]\\d\\d")[0]
+
+log.info("First request returns: " + httpStatusCode)
+
+//Repeat for the 404 request
+def httpResponseHeaders2 = testRunner.testCase.getTestStepByName("GetInfo-404").testRequest.response.responseHeaders
+def httpStatus2 = httpResponseHeaders2["#status#"]
+def httpStatusCode2 = (httpStatus2 =~ "[1-5]\\d\\d")[0]
+
+log.info("Second request returns: " + httpStatusCode2)</script>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

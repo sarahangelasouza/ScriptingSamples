@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/data/2.5/weather" method="GET" resourcePath="/data/2.5/weather" id="e9319304-2881-4e38-81be-38d09c88572c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e9319304-2881-4e38-81be-38d09c88572cfileName">%2Fdata%2F2.5%2Fweather</con:setting>
+  </con:settings>
+  <con:defaultResponse>Response 1</con:defaultResponse>
+  <con:dispatchStyle>PARAMETER</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:parameterDispatcherRuleContainer>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>q=Boston&amp;appid=85c705dd76051cb3d8e5540b300279d4</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>EQUALS</con:parameterOperationType>
+        <con:parameterName>q</con:parameterName>
+        <con:parameterValue>Boston</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>EQUALS</con:parameterOperationType>
+        <con:parameterName>appid</con:parameterName>
+        <con:parameterValue>85c705dd76051cb3d8e5540b300279d4</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:responseName>For q=Boston&amp;appid=85c705dd76051cb3d8e5540b300279d4</con:responseName>
+    </con:ParameterDispatcherRule>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>q=Miami&amp;appid=85c705dd76051cb3d8e5540b300279d4</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>EQUALS</con:parameterOperationType>
+        <con:parameterName>q</con:parameterName>
+        <con:parameterValue>Miami</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>EQUALS</con:parameterOperationType>
+        <con:parameterName>appid</con:parameterName>
+        <con:parameterValue>85c705dd76051cb3d8e5540b300279d4</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:responseName>For q=Miami&amp;appid=85c705dd76051cb3d8e5540b300279d4</con:responseName>
+    </con:ParameterDispatcherRule>
+  </con:parameterDispatcherRuleContainer>
+  <con:routeEnabled>false</con:routeEnabled>
+  <con:conditionalRoutingEnabled>false</con:conditionalRoutingEnabled>
+  <con:routeScript/>
+  <con:saveRoutedResponse>true</con:saveRoutedResponse>
+  <con:response name="Response 1" id="8afe92d5-37ca-4886-b510-d9fecf2f2ad5" httpResponseStatus="200" mediaType="application/json" encoding="utf-8">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+  <con:response name="For q=Boston&amp;appid=85c705dd76051cb3d8e5540b300279d4" id="c1038f26-2cb7-4af1-9317-2e647bd3691d" httpResponseStatus="202" mediaType="application/json" encoding="utf-8" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070">
+    <con:settings/>
+    <con:responseContent>{"coord":{"lon":-71.0598,"lat":42.3584},"weather":[{"id":804,"main":"Clouds","description":"1234","icon":"04d"}],"base":"stations","main":{"temp":297.07,"feels_like":296.59,"temp_min":295.15,"temp_max":299.2,"pressure":1021,"humidity":41},"visibility":10000,"wind":{"speed":2.68,"deg":292,"gust":5.36},"clouds":{"all":90},"dt":1622579911,"sys":{"type":2,"id":2013408,"country":"US","sunrise":1622538605,"sunset":1622592870},"timezone":-14400,"id":4930956,"name":"Boston","cod":200}</con:responseContent>
+    <con:header>
+      <con:name>Server</con:name>
+      <con:value>openresty</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Origin</con:name>
+      <con:value>*</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Credentials</con:name>
+      <con:value>true</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Methods</con:name>
+      <con:value>GET, POST</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Connection</con:name>
+      <con:value>keep-alive</con:value>
+    </con:header>
+    <con:header>
+      <con:name>X-Cache-Key</con:name>
+      <con:value>/data/2.5/weather?q=boston</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Date</con:name>
+      <con:value>Tue, 01 Jun 1999 20:43:15 GMT</con:value>
+    </con:header>
+  </con:response>
+  <con:response name="For q=Miami&amp;appid=85c705dd76051cb3d8e5540b300279d4" id="8c584787-953d-4455-a995-100ed1e4cd0f" httpResponseStatus="200" mediaType="application/json" encoding="utf-8" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070">
+    <con:settings/>
+    <con:responseContent>{"coord":{"lon":-80.1937,"lat":25.7743},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":301.24,"feels_like":303.86,"temp_min":298.16,"temp_max":303.15,"pressure":1018,"humidity":69},"visibility":10000,"wind":{"speed":2.24,"deg":69,"gust":5.36},"clouds":{"all":75},"dt":1622579991,"sys":{"type":2,"id":2009435,"country":"US","sunrise":1622543370,"sunset":1622592489},"timezone":-14400,"id":4164138,"name":"Miami","cod":200}</con:responseContent>
+    <con:header>
+      <con:name>Server</con:name>
+      <con:value>openresty</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Origin</con:name>
+      <con:value>*</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Credentials</con:name>
+      <con:value>true</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Methods</con:name>
+      <con:value>GET, POST</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Connection</con:name>
+      <con:value>keep-alive</con:value>
+    </con:header>
+    <con:header>
+      <con:name>X-Cache-Key</con:name>
+      <con:value>/data/2.5/weather?q=miami</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Date</con:name>
+      <con:value>Tue, 01 Jun 2021 20:43:21 GMT</con:value>
+    </con:header>
+  </con:response>
+</con:restMockAction>

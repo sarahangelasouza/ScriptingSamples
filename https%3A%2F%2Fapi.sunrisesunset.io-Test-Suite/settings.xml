@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="ab7f58e1-c8e6-41af-bfbf-6748f28f4ddd" name="https://api.sunrisesunset.io Test Suite" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ab7f58e1-c8e6-41af-bfbf-6748f28f4dddfileName">https%3A%2F%2Fapi.sunrisesunset.io-Test-Suite</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

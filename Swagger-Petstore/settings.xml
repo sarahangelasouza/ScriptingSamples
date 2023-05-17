@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:interface xsi:type="con:RestService" id="a39bca16-c3d7-4258-8f9a-3c05fa318db1" name="Swagger Petstore" type="rest_ex" wadlVersion="https://swagger.io/swagger2/specification" definitionUrl="https://api.swaggerhub.com/apis/foo/petstore/1.0.0" basePath="/v2" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<con:interface xsi:type="con:RestService" id="be3fc6ee-a2f5-4604-808e-8380bcbf866d" name="Swagger Petstore" type="rest_ex" wadlVersion="https://swagger.io/swagger2/specification" definitionUrl="https://api.swaggerhub.com/apis/foo/petstore/1.0.0" basePath="/v2" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:description>This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.</con:description>
   <con:settings>
-    <con:setting id="a39bca16-c3d7-4258-8f9a-3c05fa318db1fileName">Swagger-Petstore</con:setting>
+    <con:setting id="be3fc6ee-a2f5-4604-808e-8380bcbf866dfileName">Swagger-Petstore</con:setting>
   </con:settings>
   <con:definitionCache/>
   <con:endpoints>
     <con:endpoint>http://petstore.swagger.io</con:endpoint>
   </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:interface>

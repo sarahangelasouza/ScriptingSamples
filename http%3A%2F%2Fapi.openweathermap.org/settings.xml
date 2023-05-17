@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:interface xsi:type="con:RestService" id="7bce9feb-e289-4762-99d6-b5f2f4a0dce2" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://api.openweathermap.org" type="rest" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<con:interface xsi:type="con:RestService" id="4487f781-47f7-4325-be15-942fdd08b59d" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://api.openweathermap.org" type="rest" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <con:settings>
-    <con:setting id="7bce9feb-e289-4762-99d6-b5f2f4a0dce2fileName">http%3A%2F%2Fapi.openweathermap.org</con:setting>
+    <con:setting id="4487f781-47f7-4325-be15-942fdd08b59dfileName">http%3A%2F%2Fapi.openweathermap.org</con:setting>
   </con:settings>
   <con:definitionCache type="TEXT" rootPart=""/>
   <con:endpoints>
     <con:endpoint>http://api.openweathermap.org</con:endpoint>
+    <con:endpoint>http://localhost:0</con:endpoint>
   </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="Default">
+      <con:authProfile>sample basic profile</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:interface>

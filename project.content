@@ -13,4 +13,8 @@ Swagger-Petstore\%2Fuser%2FcreateWithList.xml
 Swagger-Petstore\%2Fuser%2Flogin.xml
 Swagger-Petstore\%2Fuser%2Flogout.xml
 Swagger-Petstore\%2Fuser%2F%7Busername%7D.xml
-http%3A%2F%2Fapi.openweathermap.org-Test-Suite\http%3A%2F%2Fapi.openweathermap.org-Test-Case-1.xml
+https%3A%2F%2Fapi.sunrisesunset.io\Json.xml
+OpenWeather\HeaderTest.xml
+Test-Suite-1\Test-Case-1.xml
+Test-Suite-1\Test-Case-2.xml
+https%3A%2F%2Fapi.sunrisesunset.io-Test-Suite\https%3A%2F%2Fapi.sunrisesunset.io-Test-Case-1.xml

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/user/logout" path="/user/logout" id="6dd1a2d9-c747-4515-8fdf-5d8edb9b4569" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/user/logout" path="/user/logout" id="2164b1d6-d960-4512-8d9a-94f56152d93f" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="6dd1a2d9-c747-4515-8fdf-5d8edb9b4569fileName">%2Fuser%2Flogout</con:setting>
+    <con:setting id="2164b1d6-d960-4512-8d9a-94f56152d93ffileName">%2Fuser%2Flogout</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="logoutUser" id="31d6da79-ba06-49f0-ac9f-290e8b1cb6e5" method="GET">
+  <con:method name="logoutUser" id="ffbb92a1-ef8d-4f31-9a2f-3c56b4272000" method="GET">
     <con:description>Logs out current logged in user session</con:description>
     <con:settings/>
     <con:parameters/>
@@ -18,10 +18,29 @@
       <con:status/>
       <con:params/>
     </con:representation>
-    <con:request name="Request 1" id="6dd42216-195f-433d-a7bd-629707264776" mediaType="application/json">
+    <con:request name="Request 1" id="6cde81a3-221d-44f2-b400-9cc3e1d1eead" mediaType="application/json">
       <con:settings/>
       <con:endpoint>http://petstore.swagger.io</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
     </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
   </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:resource>

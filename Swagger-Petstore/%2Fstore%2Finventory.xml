@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/store/inventory" path="/store/inventory" id="d2ffe1d8-ef1f-4701-b21f-f5c32c4ee56a" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/store/inventory" path="/store/inventory" id="aec2bfd4-7ebd-4cd0-8cd5-75f260ae692f" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="d2ffe1d8-ef1f-4701-b21f-f5c32c4ee56afileName">%2Fstore%2Finventory</con:setting>
+    <con:setting id="aec2bfd4-7ebd-4cd0-8cd5-75f260ae692ffileName">%2Fstore%2Finventory</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="getInventory" id="459c8fc8-4172-4fcb-a096-7a5240b61c4c" method="GET">
+  <con:method name="getInventory" id="68ccba1c-cf70-462f-9af0-65f5d97e23df" method="GET">
     <con:description>Returns a map of status codes to quantities
 Returns pet inventories by status</con:description>
     <con:settings/>
@@ -19,10 +19,29 @@ Returns pet inventories by status</con:description>
   "additionalProp3" : 0
 }</con:sampleContent>
     </con:representation>
-    <con:request name="Request 1" id="7d0448cf-100c-49b4-821c-45d694c3c305" mediaType="application/json">
+    <con:request name="Request 1" id="d2a75085-35e9-4e9c-bf17-367fc739ee7b" mediaType="application/json">
       <con:settings/>
       <con:endpoint>http://petstore.swagger.io</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
     </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
   </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:resource>

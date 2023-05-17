@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="762db89a-2241-462c-8736-a749d9cb9b15" name="OpenWeather" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="762db89a-2241-462c-8736-a749d9cb9b15fileName">OpenWeather</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testSuite>

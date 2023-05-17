@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="38b8ac0c-1d80-46f8-bee4-0f6376cae73d" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="https://api.sunrisesunset.io Test Case 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="38b8ac0c-1d80-46f8-bee4-0f6376cae73dfileName">https%3A%2F%2Fapi.sunrisesunset.io-Test-Case-1</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="3118ca2f-b2b3-46fb-87f3-482ce8cf7e3c">
+    <con:settings/>
+    <con:config service="https://api.sunrisesunset.io" resourcePath="/json" methodName="Json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1" id="b608a5b4-4c4a-4d4f-b96a-fe73b0f15857" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://api.sunrisesunset.io</con:endpoint>
+        <con:request/>
+        <con:assertion type="Valid HTTP Status Codes" id="1a87a5aa-3602-4c4b-aa64-93a6837a1c65" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="1cff22f0-a570-4857-a03c-c074a54afd2a" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="date" value="today"/>
+          <con:entry key="lng" value="-71.0598"/>
+          <con:entry key="timezone" value="EST"/>
+          <con:entry key="lat" value="42.3584"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>lat</con:entry>
+          <con:entry>lng</con:entry>
+          <con:entry>timezone</con:entry>
+          <con:entry>date</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

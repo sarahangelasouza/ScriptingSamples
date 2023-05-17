@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="10897fb5-2691-418b-8d88-3d055332974a" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case 2" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="10897fb5-2691-418b-8d88-3d055332974afileName">Test-Case-2</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="GetWeatherData" id="b223007b-1b48-4033-9179-9617af3c727d">
+    <con:settings/>
+    <con:config service="http://api.openweathermap.org" resourcePath="/data/2.5/weather" methodName="Weather" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GetWeatherData" id="7b18a784-89f5-4138-a772-b9367ebe5414" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://api.openweathermap.org</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://api.openweathermap.org/data/2.5/weather</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="a319eda1-102c-4926-a7cc-c7940174ebf9" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="f9e02a3c-ff21-4948-82ff-b337414f53c2" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="q" value="Miami"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>q</con:entry>
+          <con:entry>appid</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="Property Transfer" id="beefac33-dd80-45c0-ad92-56f273c00724">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>resp_lat</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>GetWeatherData</con:sourceStep>
+        <con:sourcePath/>
+        <con:targetType>lat</con:targetType>
+        <con:targetStep>SunRiseGet</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:targetTransferType>JSONPATH</con:targetTransferType>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>resp_lon</con:name>
+        <con:sourceStep>GetWeatherData</con:sourceStep>
+        <con:targetStep>SunRiseGet</con:targetStep>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="SunRiseGet" id="dade1b21-4e05-4dcd-aa4f-84dbdc0e3603">
+    <con:settings/>
+    <con:config service="https://api.sunrisesunset.io" resourcePath="/json" methodName="Json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="SunRiseGet" id="b608a5b4-4c4a-4d4f-b96a-fe73b0f15857" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.sunrisesunset.io</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.sunrisesunset.io/json</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="8f187fe7-1b44-4086-bbdb-33307d8105d1" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="d3e60447-7b9b-4eb8-ae46-126eb21a9513" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="date" value="today"/>
+          <con:entry key="lng" value="${GetWeatherData#Response#$['coord']['lon']}"/>
+          <con:entry key="timezone" value="EST"/>
+          <con:entry key="lat" value="{&quot;coord&quot;:{&quot;lon&quot;:-80.1937,&quot;lat&quot;:25.7743},&quot;weather&quot;:[{&quot;id&quot;:803,&quot;main&quot;:&quot;Clouds&quot;,&quot;description&quot;:&quot;broken clouds&quot;,&quot;icon&quot;:&quot;04d&quot;}],&quot;base&quot;:&quot;stations&quot;,&quot;main&quot;:{&quot;temp&quot;:302.61,&quot;feels_like&quot;:306.1,&quot;temp_min&quot;:301.48,&quot;temp_max&quot;:304.27,&quot;pressure&quot;:1018,&quot;humidity&quot;:66},&quot;visibility&quot;:10000,&quot;wind&quot;:{&quot;speed&quot;:8.23,&quot;deg&quot;:80,&quot;gust&quot;:10.8},&quot;clouds&quot;:{&quot;all&quot;:75},&quot;dt&quot;:1683917898,&quot;sys&quot;:{&quot;type&quot;:2,&quot;id&quot;:2009435,&quot;country&quot;:&quot;US&quot;,&quot;sunrise&quot;:1683887814,&quot;sunset&quot;:1683935848},&quot;timezone&quot;:-14400,&quot;id&quot;:4164138,&quot;name&quot;:&quot;Miami&quot;,&quot;cod&quot;:200}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>lat</con:entry>
+          <con:entry>lng</con:entry>
+          <con:entry>timezone</con:entry>
+          <con:entry>date</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:tagId>8f03b7bb-5326-4470-84d5-dd56cd5ac4a5</con:tagId>
+</con:testCase>

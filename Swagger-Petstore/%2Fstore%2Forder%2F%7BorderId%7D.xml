@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/store/order/{orderId}" path="/store/order/{orderId}" id="a7ed79da-8fb1-4166-874c-3ac88e3a36c5" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/store/order/{orderId}" path="/store/order/{orderId}" id="8dfe0e4b-839a-4bc7-aaf3-f0eb044b5577" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="a7ed79da-8fb1-4166-874c-3ac88e3a36c5fileName">%2Fstore%2Forder%2F%7BorderId%7D</con:setting>
+    <con:setting id="8dfe0e4b-839a-4bc7-aaf3-f0eb044b5577fileName">%2Fstore%2Forder%2F%7BorderId%7D</con:setting>
   </con:settings>
   <con:parameters>
     <con:parameter required="true">
@@ -11,7 +11,7 @@
       <con:description>ID of the order that needs to be deleted</con:description>
     </con:parameter>
   </con:parameters>
-  <con:method name="getOrderById" id="ea9a0652-d22b-4d93-bf45-189f56aac5ba" method="GET">
+  <con:method name="getOrderById" id="0d52d3ac-bbf1-47e7-9ef7-5a31f02b7957" method="GET">
     <con:description>For valid response try integer IDs with value &lt;= 5 or > 10. Other values will generated exceptions
 Find purchase order by ID</con:description>
     <con:settings/>
@@ -62,13 +62,27 @@ Find purchase order by ID</con:description>
       <con:status>404</con:status>
       <con:params/>
     </con:representation>
-    <con:request name="Request 1" id="990b3032-abba-4ff3-9ef4-ca31019e878c" mediaType="application/json">
+    <con:request name="Request 1" id="322cf3bd-45a9-4646-9a77-8639fb1a0263" mediaType="application/json">
       <con:settings/>
       <con:endpoint>http://petstore.swagger.io</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
     </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
   </con:method>
-  <con:method name="deleteOrder" id="de417202-70de-4c64-a25b-f64631585006" method="DELETE">
+  <con:method name="deleteOrder" id="b7e0a14d-f9a5-441b-bcd6-be516a2e3dce" method="DELETE">
     <con:description>For valid response try integer IDs with value &lt; 1000. Anything above 1000 or nonintegers will generate API errors
 Delete purchase order by ID</con:description>
     <con:settings/>
@@ -93,10 +107,29 @@ Delete purchase order by ID</con:description>
       <con:status>404</con:status>
       <con:params/>
     </con:representation>
-    <con:request name="Request 1" id="979adace-68c9-4c8f-8117-0319cdb088d6" mediaType="application/json">
+    <con:request name="Request 1" id="49d0dbd5-e306-407d-a197-fb2db4014fa0" mediaType="application/json">
       <con:settings/>
       <con:endpoint>http://petstore.swagger.io</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
     </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
   </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:resource>

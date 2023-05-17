@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pet/{petId}" path="/pet/{petId}" id="5b7b5814-8f0b-4139-aa72-9511289b12fc" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pet/{petId}" path="/pet/{petId}" id="936d1bbb-b09d-4b13-9e84-bd34fca20525" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="5b7b5814-8f0b-4139-aa72-9511289b12fcfileName">%2Fpet%2F%7BpetId%7D</con:setting>
+    <con:setting id="936d1bbb-b09d-4b13-9e84-bd34fca20525fileName">%2Fpet%2F%7BpetId%7D</con:setting>
   </con:settings>
   <con:parameters>
     <con:parameter required="true">
@@ -11,7 +11,7 @@
       <con:description>Pet id to delete</con:description>
     </con:parameter>
   </con:parameters>
-  <con:method name="getPetById" id="ca03227a-0570-4054-a613-36a7e4f11e8d" method="GET">
+  <con:method name="getPetById" id="211c0da0-b2ff-43f3-a564-8e074c37b8eb" method="GET">
     <con:description>Returns a single pet
 Find pet by ID</con:description>
     <con:settings/>
@@ -78,13 +78,27 @@ Find pet by ID</con:description>
       <con:status>404</con:status>
       <con:params/>
     </con:representation>
-    <con:request name="Request 1" id="8d8a19a7-0aed-422a-aa5d-8dffb22e202f" mediaType="application/json">
+    <con:request name="Request 1" id="398493c8-bb9c-414b-8617-70a226504115" mediaType="application/json">
       <con:settings/>
       <con:endpoint>http://petstore.swagger.io</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
     </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
   </con:method>
-  <con:method name="updatePetWithForm" id="a6b10f9b-0a18-4ba1-82f2-f4119f66fada" method="POST">
+  <con:method name="updatePetWithForm" id="7b831874-4537-4912-a542-f558729777ff" method="POST">
     <con:description>Updates a pet in the store with form data</con:description>
     <con:settings/>
     <con:parameters>
@@ -113,20 +127,34 @@ Find pet by ID</con:description>
       <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
       <con:params/>
     </con:representation>
-    <con:request name="Request 1" id="d3eb6919-d1e4-4b4b-9f51-8b64267f5a7e" mediaType="application/json">
+    <con:request name="Request 1" id="16552579-3453-4370-941f-82e2b274043f" mediaType="application/json">
       <con:settings/>
       <con:endpoint>http://petstore.swagger.io</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
     </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
   </con:method>
-  <con:method name="deletePet" id="8e924e03-f75c-443b-85fa-4c093d705738" method="DELETE">
+  <con:method name="deletePet" id="81d76afc-2e67-41bc-972c-101b84d11af8" method="DELETE">
     <con:description>Deletes a pet</con:description>
     <con:settings/>
     <con:parameters>
       <con:parameter>
         <con:name>api_key</con:name>
         <con:style>HEADER</con:style>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
     <con:representation type="RESPONSE">
@@ -139,10 +167,29 @@ Find pet by ID</con:description>
       <con:status>400</con:status>
       <con:params/>
     </con:representation>
-    <con:request name="Request 1" id="0f989a25-8354-455b-abfc-2a2c995e9708" mediaType="application/json">
+    <con:request name="Request 1" id="80b8aead-a3bf-4b26-8e3b-4610ff9114db" mediaType="application/json">
       <con:settings/>
       <con:endpoint>http://petstore.swagger.io</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
     </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
   </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="b211a863-386b-4a34-8c62-638fdd685515">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:resource>

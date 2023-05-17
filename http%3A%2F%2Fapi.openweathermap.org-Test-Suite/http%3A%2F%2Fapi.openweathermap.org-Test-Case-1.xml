@@ -65,14 +65,16 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:parameters>
-          <con:entry key="q" value="${Data Source#City}"/>
-          <con:entry key="appid" value="85c705dd76051cb3d8e5540b300279d4"/>
-        </con:parameters>
+        <con:parameters/>
         <con:parameterOrder>
           <con:entry>q</con:entry>
           <con:entry>appid</con:entry>
         </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="ad0dc034-d32a-4f71-ac41-3b1bd89a10c5">
+            <con:authProfile>asdasda</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
@@ -108,4 +110,9 @@
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="ad0dc034-d32a-4f71-ac41-3b1bd89a10c5">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:testCase>
